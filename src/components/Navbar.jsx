@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
+import { LinkedIn } from '../assets';
 
 
 
@@ -17,7 +18,8 @@ const Navbar = () => {
     <nav
       className={`
        ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary `}
-    >
+    > 
+      
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
@@ -31,6 +33,18 @@ const Navbar = () => {
           <p className='text-white text-[18px] font-bold cursor-pointer'><span className='sm:block hidden'>Olaleye Alphonso</span></p>
           
         </Link>
+        <a
+          href='https://www.linkedin.com/in/olaleye-alphonso/' 
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center gap-2'
+        >
+          <img
+            src={LinkedIn}
+            alt='linkedin'
+            className='w-20 ' 
+          />
+        </a>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
             {navLinks.map((link) => (
               <li
@@ -73,6 +87,9 @@ const Navbar = () => {
                 </li>
               ))}
            </ul>
+
+
+           
           </div>
 
         </div>

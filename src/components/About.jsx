@@ -40,7 +40,6 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
@@ -48,11 +47,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        As a highly skilled Scrum Master with technical expertise in front-end web development technologies such as JavaScript, React, HTML, and CSS, and a solid foundation in rendering 3D models using Three.js, 
+        I excel at facilitating project delivery while ensuring high quality and user experience. My background in law provides me with a strong foundation in critical thinking, problem-solving, and attention to detail, which I leverage in my role as a Scrum Master to effectively manage agile projects. 
+        My technical skills allow me to bridge the gap between development teams and stakeholders, ensuring smooth communication and collaboration. 
+        My proficiency in Three.js allows me to create engaging and immersive 3D experiences on websites. 
+        With my combined skills, I am passionate about driving projects forward, improving team dynamics, and delivering exceptional results.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
