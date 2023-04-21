@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import { logo, menu, close, git, github } from '../assets';
 import { LinkedIn } from '../assets';
 
 
 
 const Navbar = () => {
   const [active, setActive] = useState('')
-  const [toggle, setToggle] = useState('false')
+  const [toggle, setToggle] = useState('')
 
 
 
@@ -43,6 +43,18 @@ const Navbar = () => {
             src={LinkedIn}
             alt='linkedin'
             className='w-20 ' 
+          />
+        </a>
+        <a
+          href='https://github.com/Lexyalphi' 
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center gap-2'
+        >
+          <img
+            src={github}
+            alt='github'
+            className='w-10 ' 
           />
         </a>
         <ul className='list-none hidden sm:flex flex-row gap-10'>

@@ -5,7 +5,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { textVariant, fadeIn } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) =>  (
     <VerticalTimelineElement
@@ -53,13 +53,8 @@ const ExperienceCard = ({ experience }) =>  (
 const Experience = () => {
   return (
     <>
-      
-      <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
-        </h2>
-      </motion.div>
-
+      <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience.</h2>
+  
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (

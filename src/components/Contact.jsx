@@ -30,12 +30,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    // Check if name, email, and message are present
+    if (!form.name || !form.email || !form.message) {
+      alert(
+        "Please input " +
+          (!form.name ? "name, " : "") +
+          (!form.email ? "email, " : "") +
+          (!form.message ? "message, " : "") +
+          "fields."
+      );
+      return;
+    }
+  
+    // Check if email is valid using a regex pattern
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    if (!emailPattern.test(form.email)) {
+      alert("Please input a valid email address.");
+      return;
+    }
+  
     setLoading(true);
-
+  
     emailjs
       .send(
-        'service_54zr02g',
-        'template_s8uq7oa',
+        "service_54zr02g",
+        "template_s8uq7oa",
         {
           from_name: form.name,
           to_name: "Olaleye Alphonso",
@@ -43,13 +63,13 @@ const Contact = () => {
           to_email: "olaleyealphonso@gmail.com",
           message: form.message,
         },
-        'LxL31ZqD4pIJ66JrZ'
+        "LxL31ZqD4pIJ66JrZ"
       )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
+  
           setForm({
             name: "",
             email: "",
@@ -59,12 +79,11 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
+  
           alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
-
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
@@ -99,7 +118,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="Please enter your email address?"
+              placeholder="Your email address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -110,7 +129,7 @@ const Contact = () => {
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What would you like to say?'
+              placeholder='Enter Message'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>

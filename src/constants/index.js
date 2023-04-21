@@ -50,19 +50,19 @@ import {
   const services = [
     {
       title: "Scrum Master",
-      icon: web,
+      icon: scrum,
     },
     {
       title: "Web Developer",
-      icon: mobile,
+      icon: nodejs,
     },
     {
       title: " Frontend Developer",
-      icon: backend,
+      icon: javascript,
     },
     {
       title: "3D Render",
-      icon: creator,
+      icon: reactjs,
     },
   ];
   
