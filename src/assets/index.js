@@ -1,4 +1,5 @@
 import logo from "./logo.png";
+import clickhere from './clickhere.ico';
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -32,6 +33,7 @@ import mmu from './company/mmu.png';
 import oau from './company/oau.png';
 import union from './company/union.png';
 import oogi from './company/oogi.png';
+import summarize from './company/summarize.png';
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -39,6 +41,7 @@ import tripguide from "./tripguide.png";
 
 export {
   logo,
+  clickhere,
   backend,
   creator,
   mobile,
@@ -48,6 +51,7 @@ export {
   smac,
   union,
   oogi,
+  summarize,
   web,
   github,
   menu,

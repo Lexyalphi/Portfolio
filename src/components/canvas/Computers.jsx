@@ -50,9 +50,6 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  
-
-  
 
   return(
     <Canvas

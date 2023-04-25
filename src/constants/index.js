@@ -1,6 +1,7 @@
 import {
     mobile,
     backend,
+    clickhere,
     creator,
     LinkedIn,
     scrum,
@@ -9,6 +10,7 @@ import {
     smac,
     union,
     oogi,
+    summarize,
     web,
     javascript,
     typescript,
@@ -67,13 +69,10 @@ import {
   ];
   
   const technologies = [
+   
     {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
+      name: "Redux Toolkit",
+      icon: redux,
     },
     {
       name: "JavaScript",
@@ -231,67 +230,46 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Summarize",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Introducing Summarize, an open-source tool that effortlessly converts long articles into concise summaries. Save time and enhance your reading experience by quickly grasping the main points of any article. Whether you're a student, professional, or an avid reader, our user-friendly website is here to streamline your information consumption and help you stay informed with ease.",
       tags: [
         {
-          name: "react",
+          name: "ArtificialIntelligence",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Academic",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "Research",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: summarize,
+      source_code_link: "https://summarize.uk/",
     },
     {
-      name: "Job IT",
+      name: "Oogi",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Oogi, a cutting-edge demo website for cryptocurrency enthusiasts that simplifies Ethereum transactions. With Oogi, you can seamlessly connect your wallet, send Ethereum on the blockchain, and monitor live transactions directly on the website.",
       tags: [
         {
-          name: "react",
+          name: "Web3.0",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "cryptocurrency",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "blockchain",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: oogi,
+      source_code_link: "https://oogitoken.netlify.app/",
     },
   ];
   

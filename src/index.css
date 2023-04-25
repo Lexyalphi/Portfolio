@@ -65,6 +65,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+
 .green-text-gradient {
   background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -113,6 +114,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 /* canvas- styles */
 .canvas-loader {

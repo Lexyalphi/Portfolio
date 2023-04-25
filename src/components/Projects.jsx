@@ -3,12 +3,12 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github, oau, mmu, smac } from "../assets";
+import { github, oau, mmu, smac, clickhere } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects, education } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const EducationCard = ({
+const ProjectCard = ({
   index,
   name,
   description,
@@ -26,10 +26,10 @@ const EducationCard = ({
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[360px]'>
           <img
             src={image}
-            alt='education_image'
+            alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
 
@@ -39,9 +39,9 @@ const EducationCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src={''}
+                src={clickhere}
                 alt='source code'
-                className='w-1/2 h-1/2 object-contain'
+                className='w-1/2 h-1/2 object-contain hover:bg-slate-50'
               />
             </div>
           </div>
@@ -67,29 +67,29 @@ const EducationCard = ({
   );
 };
 
-const Works = () => {
+const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText}`}>Education & Certification.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
-        <motion.p
+      <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          
+          My skills and experience are demonstrated through real-world examples of my work in the following projects.
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {education.map((education, index) => (
-          <EducationCard key={`education-${index}`} index={index} {...education} />
+      <div className='mt-20 flex flex-wrap gap-24 '>
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Projects, "");
